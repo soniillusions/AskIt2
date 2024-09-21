@@ -7,3 +7,11 @@
   <br>
   <%= @question.body %>
 </p>
+
+<%= link_to 'Show', question_path(@question), class: 'btn btn-primary' %>
+<%= link_to 'Edit', edit_question_path(@question), class: 'btn btn-primary' %>
+<%= link_to 'Destroy', question_path(@question), class: 'btn btn-primary',
+  data: {method: :delete, confirm: 'Are you sure?'} %>
+
+
+
