@@ -18,17 +18,14 @@ require 'pagy/extras/bootstrap'
 # Pagy::DEFAULT[:count_args]  = []                    # example for non AR ORMs
 # Pagy::DEFAULT[:max_pages]   = 3000                  # example
 
-
 # Extras
 # See https://ddnexus.github.io/pagy/categories/extra
-
 
 # Legacy Compatibility Extras
 
 # Size extra: Enable the Array type for the `:size` variable (e.g. `size: [1,4,4,1]`)
 # See https://ddnexus.github.io/pagy/docs/extras/size
 # require 'pagy/extras/size'   # must be required before the other extras
-
 
 # Backend Extras
 
@@ -112,7 +109,6 @@ require 'pagy/extras/bootstrap'
 # uncomment if you are going to use Searchkick.pagy_search
 # Searchkick.extend Pagy::Searchkick
 
-
 # Frontend Extras
 
 # Bootstrap extra: Add nav, nav_js and combo_nav_js helpers and templates for Bootstrap pagination
@@ -131,7 +127,6 @@ require 'pagy/extras/bootstrap'
 # Multi size var used by the *_nav_js helpers
 # See https://ddnexus.github.io/pagy/docs/extras/pagy#steps
 # Pagy::DEFAULT[:steps] = { 0 => 5, 540 => 7, 720 => 9 }   # example
-
 
 # Feature Extras
 
@@ -210,12 +205,10 @@ require 'pagy/extras/bootstrap'
 #                   filepath: 'path/to/pagy-xyz.yml',
 #                   pluralize: lambda{ |count| ... } )
 
-
 # I18n extra: uses the standard i18n gem which is ~18x slower using ~10x more memory
 # than the default pagy internal i18n (see above)
 # See https://ddnexus.github.io/pagy/docs/extras/i18n
 # require 'pagy/extras/i18n'
-
 
 # When you are done setting your own default freeze it, so it will not get changed accidentally
 Pagy::DEFAULT.freeze
