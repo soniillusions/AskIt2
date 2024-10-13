@@ -5,7 +5,7 @@ module ApplicationHelper
 
   def pagination(obj)
     # rubocop:disable Rails/OutputSafety
-    raw(pagy_bootstrap_nav(@pagy)) if obj.pages > 1
+    raw(pagy_bootstrap_nav(obj)) if obj.pages > 1
     # rubocop:enable Rails/OutputSafety
   end
 
