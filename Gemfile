@@ -42,6 +42,9 @@ gem 'caxlsx', '~> 3.1'
 gem 'caxlsx_rails', '~> 0.6'
 gem 'rubyXL', '~> 3.4'
 gem 'activerecord-import', '~> 1.2'
+gem 'rails-i18n', '~> 7.0.1'
+gem 'lokalise_rails', '~> 7.0.1'
+gem 'dotenv-rails', '~> 2.7.1'
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: %i[windows jruby]
