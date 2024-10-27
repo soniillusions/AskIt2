@@ -1,19 +1,26 @@
 <% currently_at %>
 
-<h1><%= @question.title %></h1>
+<h1 class="mb-4"><%= @question.title %></h1>
 
-<p>
-  <time datetime="<%= @question.formatted_created_at %>">
-    <%= @question.formatted_created_at %>
-  </time>
-  <br>
+<time datetime="<%= @question.formatted_created_at %>">
+  <%= @question.formatted_created_at %>
+</time>
+
+<div class="lead my-3">
   <%= sanitize @question.body %>
-</p>
+</div>
 
-<%= link_to 'Show', question_path(@question), class: 'btn btn-primary' %>
-<%= link_to 'Edit', edit_question_path(@question), class: 'btn btn-primary' %>
-<%= link_to 'Destroy', question_path(@question), class: 'btn btn-primary',
-  data: {method: :delete, confirm: 'Are you sure?'} %>
+<div class="mb-3">
+  <%= @question.user.gravatar %>
+  <%= @question.user.name_or_email %>
+</div>
+
+<div class="border-top border-bottom py-3">
+    <%= link_to 'Show', question_path(@question), class: 'btn btn-primary' %>
+    <%= link_to 'Edit', edit_question_path(@question), class: 'btn btn-secondary' %>
+    <%= link_to 'Destroy', question_path(@question), class: 'btn btn-danger',
+                data: {method: :delete, confirm: 'Are you sure?'} %>
+</div>
 
 <hr class="my-3">
 
