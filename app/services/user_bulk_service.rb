@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class UserBulkService < ApplicationService
   attr_reader :archive
 
@@ -6,7 +8,7 @@ class UserBulkService < ApplicationService
   end
 
   def call
-    Zip::File.open(@archive) do |zip_file|
+    Zip::File.open(@archive) do |_zip_file|
       zip_fiel.each do |entry|
         User.import users_from(entry), ignore: true
       end
