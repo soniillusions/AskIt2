@@ -1,18 +1,107 @@
 en:
   en: English
   ru: Russian
+
+  users:
+    edit:
+      title: Edit profile
+    destroy:
+      success: User deleted!
+    update:
+      success: User updated!
+    global:
+      forms:
+        register: Register
+        save: Save
+
+
+  global:
+    user:
+      roles:
+        basic: Basic
+        moderator: Moderator
+        admin: Admin
+    button:
+      delete: Delete
+      edit: Edit
+      show: Show
+      submit: Submit
+      save: Save
+      new_question: New question
+      submit_answer: Submit answer
+    dialog:
+      you_sure: You sure?
+
   activerecord:
-    models:
-      question: Question
     attributes:
+      comment:
+        body: Body
       question:
         title: "Title"
         body: "Body"
+      answer:
+        body: "Body"
+      user:
+        email: Email
+        name: Name
+        password: Password
+        password_confirmation: Password confirmation
+        old_password: Old password
+        created_at: Created at
+        updated_at: Updated at
+        role: Role
+
+  admin:
+    users:
+      edit:
+        title: Edit user
+      update:
+        success: User updated!
+      destroy:
+        success: User deleted!
+
+  comments:
+    create:
+      success: Comment created!
+    destroy:
+      success: Comment deleted!
+
   pages:
     index:
       title: "Welcome to AskIt!"
+    questions:
+      index:
+        title: Questions
+        search_by_tags: Search by tags
+      show:
+        answers: Answers
+        write_answer: Write your answer
+        comments: Show comments
+      edit:
+        title: Edit question
+    answers:
+      edit:
+        title: Edit answer
+
   menu:
-    home: "Home"
-  questions:
-    destroy:
-      success: Question deleted!
+    edit_profile: Profile
+    home: Home
+    questions: Questions
+    sign_up: Sign Up
+    log_in: Log In
+    log_out: Log Out
+
+  flash:
+    success:
+      user_updated: 'User was successfully updated.'
+      user_logout: 'See you later!'
+      answer_create: 'Answer created!'
+      answer_update: 'Answer updated!'
+      answer_delete: 'Answer deleted!'
+      question_create: 'Question created!'
+      question_update: 'Question updated!'
+      question_delete: 'Question deleted!'
+    warning:
+      invalid_login: 'Incorrect email or password'
+      already_sign: 'You are already signed in!'
+      not_sign: 'You are not signed in!'

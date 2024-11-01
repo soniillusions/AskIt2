@@ -1,18 +1,107 @@
 ru:
   en: Английский
   ru: Русский
+
+  users:
+    edit:
+      title: Редактировать профиль
+    destroy:
+      success: Пользователь удален
+    update:
+      success: Пользователь обновлен
+    global:
+      forms:
+        register: Регистрация
+        save: Сохранить
+
+  global:
+    user:
+      roles:
+        basic: Базовый
+        moderator: Модератор
+        admin: Админ
+    button:
+      delete: Удалить
+      edit: Изменить
+      show: Показать
+      submit: Отправить
+      save: Сохранить
+      new_question: Новый вопрос
+      submit_answer: Подтвердить ответ
+    dialog:
+      you_sure: Вы уверены?
+
+
   activerecord:
-    models:
-      question: Вопрос
     attributes:
+      comment:
+        body: Текст
       question:
         title: "Заголовок"
         body: "Текст"
+      answer:
+        body: "Текст"
+      user:
+        email: Email
+        name: Имя
+        password: Пароль
+        password_confirmation: Подтверждение пароля
+        old_password: Старый пароль
+        created_at: Создан
+        updated_at: Обновлен
+        role: Роль
+
+  admin:
+    users:
+      edit:
+        title: Редактирование пользователя
+      update:
+        success: Пользователь обновлен!
+      destroy:
+        success: Пользователь удален!
+
+  comments:
+    create:
+      success: Комментарий создан!
+    destroy:
+      success: Комментарий удален!
+
   pages:
     index:
       title: "Добро пожаловать в AskIt!"
+    questions:
+      index:
+        title: Вопросы
+        search_by_tags: Поиск по тегам
+      show:
+        answers: Ответы
+        write_answer: Напишите свой ответ
+        comments: Показать комментарии
+      edit:
+        title: Изменить вопрос
+    answers:
+      edit:
+        title: Изменить ответ
+
   menu:
-    home: "Главная"
-  questions:
-    destroy:
-      success: Вопрос удален!
+    edit_profile: Профиль
+    home: Главная
+    questions: Вопросы
+    sign_up: Регистрация
+    log_in: Войти
+    log_out: Выйти
+
+  flash:
+    success:
+      user_updated: 'Пользователь успешно обновлен.'
+      user_logout: 'Увидимся позже!'
+      answer_create: 'Ответ создан!'
+      answer_update: 'Ответ обновлен!'
+      answer_delete: 'Ответ удален!'
+      question_create: 'Вопрос создан!'
+      question_update: 'Вопрос обновлен!'
+      question_delete: 'Вопрос удален!'
+    warning:
+      invalid_login: 'Неверный email или пароль'
+      already_sign: 'Вы уже авторизованы!'
+      not_sign: 'Вы не авторизованы!'
