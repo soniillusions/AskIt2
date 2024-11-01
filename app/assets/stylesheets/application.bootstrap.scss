@@ -1,36 +1,30 @@
 @import 'bootstrap/scss/bootstrap';
-@import 'bootstrap-icons/font/bootstrap-icons';
 
-.field_with_errors {
-  .form-control {
-    border-color: $red;
-  }
-  label {
-    color: $red;
-  }
-}
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
+@import "bootstrap/scss/utilities";
 
-.flag {
-  width: 16px;
-  height: 16px;
-  display: inline-block;
-  background: url('assets/images/flags.png') no-repeat;
-  overflow: hidden;
-  text-indent: -9999px;
-  text-align: left;
-}
+// Layout & components
+@import "bootstrap/scss/root";
+@import "bootstrap/scss/reboot";
+@import "bootstrap/scss/type";
+@import "bootstrap/scss/containers";
+@import "bootstrap/scss/grid";
+@import "bootstrap/scss/tables";
+@import "bootstrap/scss/forms";
+@import "bootstrap/scss/buttons";
+@import "bootstrap/scss/dropdown";
+@import "bootstrap/scss/button-group";
+@import "bootstrap/scss/nav";
+@import "bootstrap/scss/navbar";
+@import "bootstrap/scss/card";
+@import "bootstrap/scss/pagination";
+@import "bootstrap/scss/alert";
+@import "bootstrap/scss/transitions";
 
-.ru-flag {
-  background-position: -1px -0px;
+// Utilities
+@import "bootstrap/scss/utilities/api";
 
-}
-.en-flag {
-  background-position: -1px -17px;
-}
+@import 'custom';
 
-.nav {
-  .flag {
-    position: relative;
-    top: 2px;
-  }
-}
