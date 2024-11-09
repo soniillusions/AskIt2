@@ -38,7 +38,7 @@ $(document).on("turbolinks:load", function() {
                     },
                     dataType: 'json',
                     delay: 1000,
-                    processResults: function (data, params) {
+                    processResults: function(data, params) {
                         const arr = $.map(data, function(value, index){
                             return {
                                 id: value.id,
