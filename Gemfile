@@ -23,7 +23,6 @@ gem 'jsbundling-rails', '~> 1.0'
 gem 'cssbundling-rails', '~> 1.0'
 
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
-gem 'blueprinter'
 
 # Use Redis adapter to run Action Cable in production
 # gem "redis", ">= 4.0.1"
@@ -78,4 +77,4 @@ gem 'rails-i18n'
 gem 'rubyXL', '~> 3.4'
 gem 'rubyzip', '~> 2'
 gem 'valid_email2', '~> 4.0'
-gem 'jbuilder'
+gem 'blueprinter'

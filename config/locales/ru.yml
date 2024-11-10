@@ -1,19 +1,60 @@
+---
 ru:
-  en: Английский
-  ru: Русский
-
-  users:
-    edit:
-      title: Редактировать профиль
+  activerecord:
+    attributes:
+      comment:
+        body: Текст
+      answer:
+        body: Текст
+        question: Вопрос
+      question:
+        body: Текст
+        title: Заголовок
+        tags: Теги
+        tag_ids: Теги
+      user:
+        created_at: Создан
+        email: Email
+        name: Имя
+        old_password: Старый пароль
+        password: Пароль
+        password_confirmation: Подтверждение пароля
+        updated_at: Обновлён
+        role: Роль
+    models:
+      question: Вопрос
+  admin:
+    users:
+      edit:
+        title: Редактирование пользователя
+      destroy:
+        success: Пользователь удалён!
+      update:
+        success: Пользователь обновлён!
+      create:
+        success: Пользователи загружены!
+      index:
+        download_zipped: Загрузить архив с XLSX
+        title: Управление пользователями
+        upload_form:
+          archive: Выберите архив
+          submit: Загрузить!
+        upload_zipped: Загрузить пользователей в XLSX
+  comments:
+    create:
+      success: Комментарий создан!
     destroy:
-      success: Пользователь удален
+      success: Комментарий удалён!
+  answers:
+    create:
+      success: Ответ создан!
+    destroy:
+      success: Ответ удалён!
+    edit:
+      title: Редактировать вопрос
     update:
-      success: Пользователь обновлен
-    global:
-      forms:
-        register: Регистрация
-        save: Сохранить
-
+      success: Ответ обновлён!
+  en: Английский
   global:
     user:
       roles:
@@ -25,83 +66,67 @@ ru:
       edit: Изменить
       show: Показать
       submit: Отправить
-      save: Сохранить
-      new_question: Новый вопрос
-      submit_answer: Подтвердить ответ
     dialog:
       you_sure: Вы уверены?
-
-
-  activerecord:
-    attributes:
-      comment:
-        body: Текст
-      question:
-        title: "Заголовок"
-        body: "Текст"
-      answer:
-        body: "Текст"
-      user:
-        email: Email
-        name: Имя
-        password: Пароль
-        password_confirmation: Подтверждение пароля
-        old_password: Старый пароль
-        created_at: Создан
-        updated_at: Обновлен
-        role: Роль
-
-  admin:
-    users:
-      edit:
-        title: Редактирование пользователя
-      update:
-        success: Пользователь обновлен!
-      destroy:
-        success: Пользователь удален!
-
-  comments:
-    create:
-      success: Комментарий создан!
-    destroy:
-      success: Комментарий удален!
-
-  pages:
-    index:
-      title: "Добро пожаловать в AskIt!"
-    questions:
-      index:
-        title: Вопросы
-        search_by_tags: Поиск по тегам
-      show:
-        answers: Ответы
-        write_answer: Напишите свой ответ
-        comments: Показать комментарии
-      edit:
-        title: Изменить вопрос
-    answers:
-      edit:
-        title: Изменить ответ
-
+    flash:
+      already_signed_in: Вы уже вошли в систему!
+      not_signed_in: Вы не вошли в систему!
+    text:
+      omission: "... (далее)"
   menu:
     edit_profile: Профиль
     home: Главная
-    questions: Вопросы
-    sign_up: Регистрация
     log_in: Войти
     log_out: Выйти
-
-  flash:
-    success:
-      user_updated: 'Пользователь успешно обновлен.'
-      user_logout: 'Увидимся позже!'
-      answer_create: 'Ответ создан!'
-      answer_update: 'Ответ обновлен!'
-      answer_delete: 'Ответ удален!'
-      question_create: 'Вопрос создан!'
-      question_update: 'Вопрос обновлен!'
-      question_delete: 'Вопрос удален!'
-    warning:
-      invalid_login: 'Неверный email или пароль'
-      already_sign: 'Вы уже авторизованы!'
-      not_sign: 'Вы не авторизованы!'
+    questions: Вопросы
+    sign_up: Регистрация
+    users: Пользователи
+  pages:
+    index:
+      title: Добро пожаловать в AskIt!
+  questions:
+    create:
+      success: Вопрос создан!
+    destroy:
+      success: Вопрос удалён!
+    edit:
+      title: Редактировать вопрос
+    index:
+      new: Новый вопрос
+      title: Вопросы
+      search_by_tags: Поиск по тегам
+    new:
+      title: Новый вопрос
+    show:
+      answers: Ответы
+      write_answer: Напишите свой ответ
+      comments: Комментарии
+    update:
+      success: Вопрос обновлён!
+  ru: Русский
+  sessions:
+    create:
+      invalid_creds: Неверный email и/или пароль!
+      success: С возвращением, %{name}!
+    destroy:
+      success: До новых встреч!
+    new:
+      form:
+        email: Email
+        password: Пароль
+        remember_me: Запомнить меня
+        submit: Войти!
+      title: Войти
+  users:
+    create:
+      success: Добро пожаловать, %{name}!
+    edit:
+      title: Редактировать профиль
+    global:
+      forms:
+        register: Регистрация
+        save: Сохранить
+    new:
+      title: Регистрация
+    update:
+      success: Ваш профиль был обновлён!
