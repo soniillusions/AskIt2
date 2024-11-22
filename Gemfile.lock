@@ -92,7 +92,7 @@ GEM
     benchmark (0.4.0)
     bigdecimal (3.1.8)
     bindex (0.8.1)
-    blueprinter (1.1.2)
+    blueprinter (0.30.0)
     bootsnap (1.18.4)
       msgpack (~> 1.2)
     builder (3.3.0)
@@ -210,6 +210,8 @@ GEM
     public_suffix (6.0.1)
     puma (6.4.3)
       nio4r (~> 2.0)
+    pundit (1.1.0)
+      activesupport (>= 3.0.0)
     racc (1.8.1)
     rack (3.1.8)
     rack-session (2.0.0)
@@ -325,7 +327,7 @@ PLATFORMS
 DEPENDENCIES
   activerecord-import (~> 1.7.0)
   bcrypt (~> 3.1.7)
-  blueprinter
+  blueprinter (~> 0.25)
   bootsnap
   bullet
   caxlsx (~> 3.1)
@@ -340,6 +342,7 @@ DEPENDENCIES
   lokalise_rails (~> 2)
   pagy (~> 8.3)
   puma (>= 5.0)
+  pundit (~> 1.0)
   rails (~> 7.1.3, >= 7.1.3.2)
   rails-i18n
   rubocop (~> 1.18)

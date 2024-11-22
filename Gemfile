@@ -67,14 +67,15 @@ group :development do
 end
 
 gem 'activerecord-import', '~> 1.7.0'
+gem 'blueprinter', '~> 0.25'
 gem 'caxlsx', '~> 3.1'
 gem 'caxlsx_rails', '~> 0.6'
 gem 'dotenv-rails', '~> 2.0'
 gem 'draper', '~> 4.0'
 gem 'lokalise_rails', '~> 2'
 gem 'pagy', '~> 8.3' # omit patch digitgem 'pagy', '~> 4.1'
+gem 'pundit', '~> 1.0'
 gem 'rails-i18n'
 gem 'rubyXL', '~> 3.4'
 gem 'rubyzip', '~> 2'
 gem 'valid_email2', '~> 4.0'
-gem 'blueprinter'

@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class User < ApplicationRecord
-  enum role: { basic: 0, moderator: 1, admin: 2 }, _suffix: :role
+  enum :role, { basic: 0, moderator: 1, admin: 2 }, suffix: :role
 
   attr_accessor :old_password, :remember_token, :admin_edit
 
@@ -19,6 +19,14 @@ class User < ApplicationRecord
   validates :role, presence: true
 
   before_save :set_gravatar_hash, if: :email_changed?
+
+  def guest?
+    false
+  end
+
+  def author?(obj)
+    obj.user == self
+  end
 
   def remember_me
     self.remember_token = SecureRandom.urlsafe_base64
