@@ -1,0 +1,5 @@
+Кто-то запросил восстановления пароля для вашего аккаунта. Если это были вы, то перейдите по ссылке, чтобы его изменить:
+
+
+<%= url_for edit_password_reset_url(user: {password_reset_token: @user.password_reset_token,
+                                           email: @user.email}, locale: :ru) %>
