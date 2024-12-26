@@ -24,6 +24,13 @@ en:
     models:
       question: Question
   admin:
+    user_mailer:
+      bulk_import_done:
+        subject: User import done | AskIt
+      bulk_import_fail:
+        subject: User import failed | AskIt
+      bulk_export_done:
+        subject: User export done | AskIt
     users:
       edit:
         title: Edit user
