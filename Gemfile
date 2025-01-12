@@ -7,14 +7,14 @@ ruby '3.1.2'
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem 'rails', '~> 7.1.3', '>= 7.1.3.2'
 
-# The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
-gem 'sprockets-rails', '~> 3.4'
-
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3', '~> 1.4'
 
 # Use the Puma web server [https://github.com/puma/puma]
 gem 'puma', '>= 5.0'
+
+gem 'propshaft', '~> 0.6'
+gem 'turbo-rails', '~> 1.0'
 
 # Bundle and transpile JavaScript [https://github.com/rails/jsbundling-rails]
 gem 'jsbundling-rails', '~> 1.0'
@@ -25,7 +25,7 @@ gem 'cssbundling-rails', '~> 1.0'
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 
 # Use Redis adapter to run Action Cable in production
-# gem "redis", ">= 4.0.1"
+gem 'redis', '>= 4.0.1'
 
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
@@ -63,8 +63,8 @@ group :development do
   gem 'bullet'
   gem 'rubocop', '~> 1.18', require: false
   gem 'rubocop-performance', '~> 1.11', require: false
-  gem 'rubocop-rails', '~> 2.11', require: false
   gem 'letter_opener'
+  gem 'rubocop-rails', '~> 2.11', require: false
 end
 
 gem 'activerecord-import', '~> 1.7.0'
@@ -79,5 +79,6 @@ gem 'pundit', '~> 1.0'
 gem 'rails-i18n'
 gem 'rubyXL', '~> 3.4'
 gem 'rubyzip', '~> 2'
-gem 'valid_email2', '~> 4.0'
 gem 'sidekiq', '~> 7.3.7'
+gem 'valid_email2', '~> 4.0'
+

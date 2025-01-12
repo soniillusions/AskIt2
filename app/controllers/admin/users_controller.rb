@@ -15,7 +15,8 @@ module Admin
 
         format.zip do
           UserBulkExportJob.perform_later current_user
-          flash[:success] = 'Задача поставлена в очередь на выполнение, как только она завершится - вы получите уведомление на почту'
+          flash[:success] =
+            'Задача поставлена в очередь на выполнение, как только она завершится - вы получите уведомление на почту'
           redirect_to admin_users_path
         end
       end

@@ -1,7 +1,11 @@
+# frozen_string_literal: true
+
 class PasswordResetsController < ApplicationController
   before_action :require_no_authentication
   before_action :check_user_params, only: %i[edit update]
-  before_action :set_user, only: [:edit, :update]
+  before_action :set_user, only: %i[edit update]
+
+  def edit; end
 
   def create
     @user = User.find_by email: params[:email]
@@ -14,9 +18,6 @@ class PasswordResetsController < ApplicationController
 
     flash[:success] = t '.success'
     redirect_to new_session_path
-  end
-
-  def edit
   end
 
   def update
@@ -40,8 +41,11 @@ class PasswordResetsController < ApplicationController
 
   def set_user
     @user = User.find_by email: params[:user][:email],
-                          password_reset_token: params[:user][:password_reset_token]
+                         password_reset_token: params[:user][:password_reset_token]
 
-    redirect_to(new_session_path, flash: { warning: t('password_resets.fail')} ) unless @user&.password_reset_period_valid?
+    return if @user&.password_reset_period_valid?
+
+    redirect_to(new_session_path,
+                flash: { warning: t('password_resets.fail') })
   end
 end

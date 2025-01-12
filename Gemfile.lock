@@ -212,6 +212,11 @@ GEM
     parser (3.3.6.0)
       ast (~> 2.4.1)
       racc
+    propshaft (0.9.1)
+      actionpack (>= 7.0.0)
+      activesupport (>= 7.0.0)
+      rack
+      railties (>= 7.0.0)
     psych (5.2.2)
       date
       stringio
@@ -264,6 +269,8 @@ GEM
     rake (13.2.1)
     rdoc (6.10.0)
       psych (>= 4.0.0)
+    redis (5.3.0)
+      redis-client (>= 0.22.0)
     redis-client (0.23.0)
       connection_pool
     regexp_parser (2.10.0)
@@ -308,17 +315,14 @@ GEM
       logger
       rack (>= 2.2.4)
       redis-client (>= 0.22.2)
-    sprockets (4.2.1)
-      concurrent-ruby (~> 1.0)
-      rack (>= 2.2.4, < 4)
-    sprockets-rails (3.5.2)
-      actionpack (>= 6.1)
-      activesupport (>= 6.1)
-      sprockets (>= 3.0.0)
     sqlite3 (1.7.3-x86_64-linux)
     stringio (3.1.2)
     thor (1.3.2)
     timeout (0.4.3)
+    turbo-rails (1.5.0)
+      actionpack (>= 6.0.0)
+      activejob (>= 6.0.0)
+      railties (>= 6.0.0)
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
     unicode-display_width (3.1.2)
@@ -359,18 +363,20 @@ DEPENDENCIES
   letter_opener
   lokalise_rails (~> 2)
   pagy (~> 9.3.3)
+  propshaft (~> 0.6)
   puma (>= 5.0)
   pundit (~> 1.0)
   rails (~> 7.1.3, >= 7.1.3.2)
   rails-i18n
+  redis (>= 4.0.1)
   rubocop (~> 1.18)
   rubocop-performance (~> 1.11)
   rubocop-rails (~> 2.11)
   rubyXL (~> 3.4)
   rubyzip (~> 2)
   sidekiq (~> 7.3.7)
-  sprockets-rails (~> 3.4)
   sqlite3 (~> 1.4)
+  turbo-rails (~> 1.0)
   tzinfo-data
   valid_email2 (~> 4.0)
   web-console
