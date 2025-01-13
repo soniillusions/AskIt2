@@ -38,7 +38,7 @@ module Admin
         flash[:success] = 'User updated!'
         redirect_to admin_users_path
       else
-        render :edit
+        render :edit, status: :unprocessable_entity
       end
     end
 
