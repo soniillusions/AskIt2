@@ -69,7 +69,7 @@ class QuestionsController < ApplicationController
       end
 
       format.turbo_stream do
-        flash[:success] = t('.success')
+        flash.now[:success] = t('.success')
       end
     end
   end

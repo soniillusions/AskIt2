@@ -15,8 +15,17 @@ class AnswersController < ApplicationController
     @answer = @question.answers.build(answer_create_params)
 
     if @answer.save
-      flash[:success] = 'Answer created!'
-      redirect_to question_path(@question)
+      respond_to do |format|
+        format.html do
+          flash[:success] = 'Answer created!'
+          redirect_to question_path(@question)
+        end
+
+        format.turbo_stream do
+          @answer = @answer.decorate
+          flash.now[:success] = 'Answer created!'
+        end
+      end
     else
       load_questions_answers(do_render: true)
     end
@@ -24,8 +33,17 @@ class AnswersController < ApplicationController
 
   def update
     if @answer.update(answer_update_params)
-      flash[:success] = 'Answer updated!'
-      redirect_to question_path(@question, anchor: dom_id(@answer))
+      respond_to do |format|
+        format.html do
+          flash[:success] = 'Answer updated!'
+          redirect_to question_path(@question, anchor: dom_id(@answer))
+        end
+
+        format.turbo_stream do
+          @answer = @answer.decorate
+          flash.now[:success] = 'Answer updated!'
+        end
+      end
     else
       render 'questions/show'
     end
@@ -33,8 +51,16 @@ class AnswersController < ApplicationController
 
   def destroy
     @answer.destroy
-    flash[:success] = 'Answer deleted!'
-    redirect_to question_path(@question)
+    respond_to do |format|
+      format.html do
+        flash[:success] = 'Answer deleted!'
+        redirect_to question_path(@question)
+      end
+
+      format.turbo_stream do
+        flash.now[:success] = 'Answer deleted!'
+      end
+    end
   end
 
   private

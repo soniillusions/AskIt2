@@ -61,9 +61,9 @@ group :development do
   gem 'error_highlight', '>= 0.4.0', platforms: [:ruby]
 
   gem 'bullet'
+  gem 'letter_opener'
   gem 'rubocop', '~> 1.18', require: false
   gem 'rubocop-performance', '~> 1.11', require: false
-  gem 'letter_opener'
   gem 'rubocop-rails', '~> 2.11', require: false
 end
 
@@ -81,4 +81,3 @@ gem 'rubyXL', '~> 3.4'
 gem 'rubyzip', '~> 2'
 gem 'sidekiq', '~> 7.3.7'
 gem 'valid_email2', '~> 4.0'
-
