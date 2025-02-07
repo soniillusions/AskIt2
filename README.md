@@ -1,24 +1,22 @@
-# README
+## Installation
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Ensure you have Ruby and Bundler installed. Then, install the required gems:
 
-Things you may want to cover:
+```sh
+bundle install
+```
 
-* Ruby version
+Set up the database:
 
-* System dependencies
+```sh
+rails db:create db:migrate db:seed
+```
 
-* Configuration
+## Running the Application
 
-* Database creation
+To start the application, run:
 
-* Database initialization
+```sh
+bin/dev
+```
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
