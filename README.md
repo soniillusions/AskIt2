@@ -1,5 +1,5 @@
 # AskIt2 
-Questions&Answers app I built on Rails course by @IlyaBodrovKrukowski
+Questions & Answers app I built on Rails course by @IlyaBodrovKrukowski
 
 ## Features:
 
